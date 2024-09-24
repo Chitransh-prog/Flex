@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-Assign</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex: 1;
+      }
+
+      .top-row {
+        display: flex;
+        gap: 16px;
+        flex: 1; 
+      }
+
+      .top-left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex: 1;
+      }
+
+      .top-right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex: 2;
+      }
+
+      .nested-row {
+        display: flex;
+        gap: 16px;
+      }
+
+      .nested-box {
+        flex: 1;
+        height: 100%;
+      }
+
+      .bottom-row {
+        display: flex;
+        gap: 16px;
+      }
+
+      .yellow-box {
+        background-color: #fefcbf;
+        height: 320px;
+        margin-bottom: 16px; 
+      }
+
+      .cyan-box {
+        background-color: #c7cbce;
+        height: 208px;
+      }
+
+      .purple-box {
+        background-color: #dfc7eb;
+        height: 288px;
+      }
+
+      .green-box {
+        background-color: #bbf7d0;
+        height: 112px;
+      }
+
+      .blue-box {
+        background-color: #bfdbfe;
+        height: 112px;
+      }
+
+      .red-box {
+        background-color: #fecdd4;
+        height: 112px;
+      }
+
+      .black-box {
+        background-color: #000000;
+        flex: 1;
+        height: 100%;
+      }
+
+      .slate-box {
+        background-color: #f1f5f9;
+        flex: 7;
+        height: 112px;
+      }
+
+      .blue-box-2 {
+        background-color: #bfdbfe;
+        flex: 5;
+        height: 112px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-column">
+        <div class="top-row">
+          <div class="top-left">
+            <div class="purple-box"></div>
+            <div class="green-box"></div>
+          </div>
+          <div class="top-right">
+            <div class="nested-row">
+              <div class="nested-box blue-box"></div>
+              <div class="nested-box red-box"></div>
+            </div>
+            <div class="black-box"></div>
+          </div>
+        </div>
+        <div class="bottom-row">
+          <div class="slate-box"></div>
+          <div class="blue-box-2"></div>
+        </div>
+      </div>
+      <div class="flex" style="flex: 0 0 25%">
+        <div class="yellow-box"></div>
+        <div class="cyan-box"></div>
+      </div>
+    </div>
+  </body>
+</html>
